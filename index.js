@@ -55,12 +55,13 @@ const convertToTS = async (json, typeName) => {
 };
 
 const createTypeFiles = async (type, filename = null, parser) => {
+  const config = await fse.readJson(configPath);
   const result = await convertToTS(
     JSON.stringify(await getPrismicJson(type, parser)),
     filename ? filename : type
   );
 
-  const path = `./types/${filename ?? type}.ts`;
+  const path = `./${config.outputPath || 'types'}/${filename ?? type}.ts`;
 
   return await fse.outputFile(path, result.lines.join('\n'));
 };
