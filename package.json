@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "prismic-ts-gen": "src/index.js"
+    "prismic-ts-gen": "index.js"
   },
   "keywords": [],
   "author": "",
