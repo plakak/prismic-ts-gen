@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const get = require('axios').get;
 const fse = require('fs-extra');
 const {
