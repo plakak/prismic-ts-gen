@@ -1,0 +1,20 @@
+{
+  "name": "prismic-ts-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.27.2",
+    "dotenv": "16.0.1",
+    "fs-extra": "10.1.0",
+    "node-fetch": "3.2.5",
+    "quicktype-core": "6.0.71",
+    "slice-machine-ui": "0.3.8"
+  }
+}
