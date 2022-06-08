@@ -10,9 +10,11 @@ const {
 
 const path = require('path');
 
+const appRootDir = process.cwd();
+const configPath = path.resolve(appRootDir, '.prismic-ts-gen.json');
 
 const getPrismicJson = async (type, parser) => {
-  const config = await fse.readJson(`${path.dirname(require.main.filename)}/.prismic-ts-gen.json`);
+  const config = await fse.readJson(configPath);
   const response = await get(`https://customtypes.prismic.io/${type}`, {
     headers: {
       repository: config.repository,
